@@ -6,7 +6,7 @@ import { Fontisto} from '@expo/vector-icons'
 import {useAuth}   from '../hooks/userAuth';
 
 export function Signin(){
-   const {signIn, user} = useAuth();
+   const {signIn, isUserLoading} = useAuth();
 
     return (
         <Center flex={1} bgColor="gray.900" p={7}>
@@ -15,6 +15,8 @@ export function Signin(){
             title="Entrar com o Google"
             type="SECONDARY" 
             onPress={signIn}
+            isLoading={isUserLoading}
+            _loading={{ _spinner: { color: 'white' }}}
             />
 
             <Text color="white" textAlign="center" mt={4}>

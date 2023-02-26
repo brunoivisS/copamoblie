@@ -19,7 +19,7 @@ export function New(){
                 placeholder="Qual nome do seu bolão?"
             />
 
-            <Button
+            <Button 
                 title='CRIAR MEU BOLÃO'
             />
 
